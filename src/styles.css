@@ -75,6 +75,8 @@ svg { width: 1.2em; height: 1.2em; fill: none; stroke: currentColor; stroke-widt
 .hero__location, .eyebrow { margin: 0 0 22px; display: flex; align-items: center; gap: 11px; color: var(--red); font-size: .72rem; font-weight: 800; letter-spacing: .15em; text-transform: uppercase; }
 .hero__location span, .eyebrow i { display: inline-block; width: 30px; height: 2px; background: currentColor; }
 .hero h1, .section-heading h2, .location h2 { margin: 0; font-family: var(--display); font-weight: 800; text-transform: uppercase; letter-spacing: -.035em; line-height: .78; }
+.display-stack { display: flex; flex-direction: column; gap: .18em; }
+.display-stack > span { display: block; }
 .hero h1 { max-width: 790px; font-size: clamp(5.3rem, 10.2vw, 9rem); }
 .hero h1 em, .section-heading h2 em, .location h2 em { color: var(--red); font-style: normal; }
 .hero__lead { max-width: 580px; margin: 34px 0 30px; font-size: clamp(1rem, 1.45vw, 1.2rem); line-height: 1.65; color: #d0cdc7; }

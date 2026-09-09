@@ -76,7 +76,7 @@ function SectionHeading({ eyebrow, title, copy, dark = false }) {
   return (
     <div className={`section-heading ${dark ? 'section-heading--dark' : ''}`} data-reveal>
       <span className="eyebrow"><i />{eyebrow}</span>
-      <h2>{title}</h2>
+      <h2 className="display-stack">{title}</h2>
       {copy && <p>{copy}</p>}
     </div>
   )
@@ -89,7 +89,10 @@ function Hero() {
       <div className="hero__texture" aria-hidden="true" />
       <div className="container hero__content">
         <p className="hero__location"><span /> Studio de treinamento · Floramar</p>
-        <h1 id="hero-title">Aqui a máquina<br />é <em>você.</em></h1>
+        <h1 className="display-stack" id="hero-title">
+          <span>Aqui a máquina</span>
+          <span>É <em>você.</em></span>
+        </h1>
         <p className="hero__lead">Treinos exclusivos, acompanhamento próximo e direção para você evoluir por inteiro.</p>
         <div className="hero__actions">
           <a className="button" href={studio.whatsappUrl} target="_blank" rel="noreferrer">
@@ -115,7 +118,7 @@ function Method() {
         <div className="method__intro">
           <SectionHeading
             eyebrow="Método CFCM"
-            title={<>Treinar mais não basta.<br /><em>É preciso direção.</em></>}
+            title={<><span>Treinar mais não basta.</span><span><em>É preciso direção.</em></span></>}
           />
           <p className="method__statement" data-reveal>
             No CFCM, a proposta é fazer o treino conversar com o seu momento. Atenção à execução, progressão coerente e presença de verdade em cada etapa.
@@ -148,7 +151,7 @@ function Modalities() {
           <SectionHeading
             dark
             eyebrow="Modalidades"
-            title={<>Diferentes caminhos.<br /><em>Uma só direção.</em></>}
+            title={<><span>Diferentes caminhos.</span><span><em>Uma só direção.</em></span></>}
             copy="Uma prévia de como os treinos podem ser organizados. A grade, frequência e os planos oficiais serão publicados após confirmação do Studio."
           />
           <span className="illustrative-badge">Conteúdo ilustrativo</span>
@@ -180,10 +183,10 @@ function Experience() {
     <section className="experience" id="estrutura">
       <div className="experience__image-wrap" data-reveal>
         <img
-          src="/images/experiencia-studio-cfcm.webp"
-          alt="Grupo em sessão de treinamento funcional com orientação próxima"
-          width="1792"
-          height="1024"
+          src="/images/experiencia-studio-cfcm-instrutora.jpg"
+          alt="Instrutora acompanhando de perto uma aluna durante exercício com kettlebell"
+          width="1122"
+          height="1402"
           loading="lazy"
         />
         <span>Imagem editorial gerada para ambientação</span>
@@ -192,7 +195,7 @@ function Experience() {
         <SectionHeading
           dark
           eyebrow="A experiência"
-          title={<>Um lugar para<br /><em>treinar presente.</em></>}
+          title={<><span>Um lugar para</span><span><em>treinar presente.</em></span></>}
         />
         <p data-reveal>Ambiente acolhedor não significa treino sem exigência. Aqui, estrutura, equipamentos e orientação existem para você se concentrar no que importa: executar bem e seguir em frente.</p>
         <div className="experience__points" data-reveal>
@@ -213,7 +216,7 @@ function Results() {
         <div className="results__heading">
           <SectionHeading
             eyebrow="Resultados e histórias"
-            title={<>Evolução real tem<br /><em>contexto.</em></>}
+            title={<><span>Evolução real tem</span><span><em>contexto.</em></span></>}
             copy="Este espaço será dedicado a relatos autorizados de alunos — com ponto de partida, processo e conquistas contadas sem exagero."
           />
           <a className="text-link text-link--dark" href={studio.whatsappUrl} target="_blank" rel="noreferrer">Comece sua história <ArrowIcon /></a>
@@ -245,7 +248,7 @@ function Location() {
       </div>
       <div className="location__copy" data-reveal>
         <span className="eyebrow"><i />Onde treinar</span>
-        <h2 id="location-title">No Floramar.<br /><em>Na sua rota.</em></h2>
+        <h2 className="display-stack" id="location-title"><span>No Floramar.</span><span><em>Na sua rota.</em></span></h2>
         <address>
           <strong>{studio.address}</strong>
           <span>{studio.city}</span>
@@ -376,7 +379,7 @@ function Contact() {
           <SectionHeading
             dark
             eyebrow="Aula experimental"
-            title={<>Seu treino começa<br /><em>com uma conversa.</em></>}
+            title={<><span>Seu treino começa</span><span><em>com uma conversa.</em></span></>}
             copy="Conte um pouco sobre o que você busca. A partir daí, o Studio CFCM orienta o próximo passo."
           />
           <div className="contact__direct" data-reveal>
